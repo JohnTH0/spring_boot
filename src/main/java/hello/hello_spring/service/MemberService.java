@@ -6,14 +6,19 @@ import java.util.Optional;
 import hello.hello_spring.domain.Member;
 import hello.hello_spring.repository.MemberRepository;
 import hello.hello_spring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /* Ctrl Shift T로 테스트 케이스를 생성*/
+
 public class MemberService {
 
 //    private final MemberRepository memberRepository = new MemoryMemberRepository();
 
     /* TestCase에서 memberRepository를 받아옴 (D.I 의존성주입) */
+
     private final MemberRepository memberRepository;
+
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
