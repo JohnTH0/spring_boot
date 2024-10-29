@@ -8,9 +8,11 @@ import hello.hello_spring.repository.MemberRepository;
 import hello.hello_spring.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /* Ctrl Shift T로 테스트 케이스를 생성*/
 
+@Transactional
 public class MemberService {
 
 //    private final MemberRepository memberRepository = new MemoryMemberRepository();
